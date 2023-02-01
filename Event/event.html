@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <h1>altKey</h1>
+    <input id="alt" type="text" onclick="altFunc(event)">
+    <p id="alt-key"></p>
+
+    <br>
+    <hr>
+
+    <h1>ctrlKey</h1>
+    <input id="ctrl" type="text" onclick="ctrlFunc(event)">
+    <p id="ctrl-key"></p>
+
+    <br>
+    <hr>
+
+    <h1>event.clientX event.clientY</h1>
+    <div onmousemove="clientX(event)" class="div1" style="width: 350px; height: 350px; background-color: red;"></div>
+    <p id="clientX"></p>
+
+    <div class="div1" id="moveDiv2" style="width: 350px; height: 350px; background-color: blue;">
+        <div class="div2" id="moveDiv" style="width: 30px; height: 350px; background-color: red; "></div>
+    </div>
+
+    <br>
+    <hr>
+
+    <h1>event.stopPropagation</h1>
+    <div onclick="div1()" class="div1" style="width: 350px; height: 350px; background-color: red;">
+        <div onclick="div2(event)" class="div2" id="div2"
+            style="width: 350px; height: 350px; background-color: blue; margin-left: 400px;"></div>
+    </div>
+
+    <br>
+    <hr>
+
+    <h1>event.preventDefault</h1>
+    <a onclick="preventD(event)" href="https://www.google.com/">go site</a>
+
+    <br>
+    <hr>
+
+    <h1>event.currentTarget</h1>
+    <div onclick="target(event)" class="div1" style="width: 350px; height: 350px; background-color: red;"></div>
+    <p id="target"></p>
+
+    <br>
+    <hr>
+
+    <h1>event.target</h1>
+    <div onclick="targett(event)" class="div1" style="width: 350px; height: 350px; background-color: red;"></div>
+    <p id="targett"></p>
+
+    <br>
+    <hr>
+
+    <h1>event.data</h1>
+    <input type="text" id="myInput" oninput="data(event)">
+    <p id="data"></p>
+
+    <br>
+    <hr>
+
+    <h1>event.inputType</h1>
+    <!-- <input type="text" id="inputT" oninput="inputT(event)"> -->
+    <textarea id="inputT" oninput="inputT(event)" cols="30" rows="10"></textarea>
+    <p id="inputT"></p>
+
+
+    <script src="Event.js"></script>
+</body>
+
+</html>

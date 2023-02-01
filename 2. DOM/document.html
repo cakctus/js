@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .democlass {
+            color: red;
+        }
+    </style>
+
+
+    <h1 id="h1">document.activeElement.tagName</h1>
+    <p id="activeElement"></p>
+    <br>
+
+
+    <h1 onclick="lastModified()">document.lastModified</h1>
+    <p id="lastModified"></p>
+    <br>
+
+
+    <h1>document.hasFocus</h1>
+    <p id="hasFocus"></p>
+    <br>
+    <hr>
+
+    <h1>document.open</h1>
+    <p onclick="documentOpen()">click</p>
+    <br>
+
+    <h1>window.open</h1>
+    <p onclick="windowOpen()">click</p>
+    <br>
+    <hr>
+
+    <h1>setAttributeNode createAttribute createElement createTextNode</h1>
+    <p id="append"></p>
+
+
+
+
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+    <select id="mySelect" size="10">
+        <option>Audi</option>
+        <option>BMW</option>
+        <option>Saab</option>
+        <option>Volvo</option>
+    </select>
+
+    <br>
+    <hr>
+
+    <h1>forms.length forms[i].id</h1>
+    <form id="myCarForm">
+        Favorite Car: <input type="text" name="fname" value="Volvo">
+    </form>
+
+    <form id="myColorForm">
+        <div>
+            <label for="favcolor">Favorite Color</label>
+            <input type="text" id="favcolor" name="favcolor" value="Blue">
+        </div>
+        <div>
+            <label for="favfood">Favorite Food</label>
+            <input type="text" id="favfood" name="favfood" value="Meat">
+        </div>
+    </form>
+
+    <p>The name of the form elements in the document are:</p>
+    <p id="form-name"></p>
+    <br>
+    <hr>
+
+    <form id="animals" action="">
+        <label for="cat">Cat</label>
+        <input id="cat" name="animal" type="checkbox" value="Cats">
+        <label for="dog">Dog</label>
+        <input id="dog" name="animal" type="checkbox" value="Dogs"> <br>
+    </form>
+    <p id="activeElement"></p>
+
+    <p id="dropdown"></p>
+
+    <script src="1. Document.js"></script>
+</body>
+
+</html>

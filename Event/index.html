@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../index.css">
+</head>
+
+<body onresize="myFunction()">
+  <p id="resize"></p>
+
+  <div class="top" id="top">
+    <p class="title_1 anim-items animationNoRepeat">Title 1</p>
+    <p class="title_1 anim-items">Title 2</p>
+  </div>
+
+  <section class="animation" id="animation">
+    <h1 class="animation__title anim-items">animation start animation end</h1>
+    <div id="myDIV" onclick="animationFunction(event)">Click me to start the animation.</div>
+  </section>
+
+  <hr>
+  <br>
+
+  <section class="transition" id="transition">
+    <h3 class="anim-items">transition end</h3>
+    <div class="transition-div" id="transition-div"></div>
+  </section>
+
+  <section class="print" id="print">
+    <h3 class="animation__print anim-items">before print after print</h3>
+    <p id="beforePrint"></p>
+  </section>
+
+
+  <hr>
+  <section class="input" id="input">
+    <h3 class="animation__input anim-items">oninput</h3>
+    <input type="text" id="oninput" oninput="onInputFunction()">
+    <p id="inputtext"></p>
+
+    <h3>oninput</h3>
+    <input type="range" id="rangeinpurt" oninput="onRangeInput(this.value)" min="50" max="100">
+    <p id="inputrange"></p>
+
+    <h3>onblur</h3>
+    <input type="text" id="fname" onblur="onBlur()">
+
+    <h3>onfocus</h3>
+    <form action="" id="myForm">
+      <input type="text" id="myInput">
+    </form>
+
+    <br>
+    <input type="checkbox" oninput="onCheckBoxInput(this.value)" id="vehicle1" name="vehicle1" value="Bike">
+    <label for="vehicle1"> I have a bike</label><br>
+
+    <input type="checkbox" oninput="onCheckBoxInput(this.value)" id="vehicle2" name="vehicle2" value="Car">
+    <label for="vehicle2"> I have a car</label><br>
+
+    <input type="checkbox" oninput="onCheckBoxInput(this.value)" id="vehicle3" name="vehicle3" value="Boat">
+    <label for="vehicle3"> I have a boat</label><br>
+
+    <input type="checkbox" oninput="onCheckBoxInput(this.value)" id="vehicle3" name="vehicle3" value="2">
+    <label for="vehicle3"> 2</label><br>
+
+    <h3>onchange</h3>
+
+    <select id="mySelect" onchange="onChange()">
+      <option value="Audi">Audi</option>
+      <option value="BMW">BMW</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Volvo">Volvo</option>
+    </select>
+    <input type="text" id="fnames" onchange="myFunction4()">
+
+    <p id="selected"></p>
+
+    <br>
+    <textarea id="story" name="story" rows="5" cols="33" onselect="onSelect(event)">
+        Lorem ipsum dolor sit amet .
+      </textarea>
+
+    <input type="text" value="value" onselect="onSelect()">
+  </section>
+
+  <hr>
+  <section class="keyboard" id="keyboard">
+    <h3 class="animation__keyboard  anim-items "> onkeydawn, onkessup, onkeypress </h3>
+    <input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()"
+      onkeypress='keypress()'></input>
+    <p id="keypress"></p>
+
+    <hr>
+    <h3>onclick, ondbclick, oncopy, onpaste, oncut</h3>
+    <p onclick="onClick()">click me</p>
+    <p oncopy="onCopy()">copy me</p>
+    <input type="text" onpaste="onPaste()" value="Try to paste something in here" size="50">
+    <br>
+    <input type="text" oncut="onCut()" value="cut me">
+    <p id="clicked"></p>
+  </section>
+
+  <br>
+  <hr>
+
+  <h3 class="mouse anim-items">mouse down mouse up mouse over mouse leave mouse enter mouse out</h3>
+
+  <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+    Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph,
+    and sets the color of the text to red. The mouseUp() function is triggered when
+    the mouse button is released, and sets the color of the text to green.
+  </p>
+
+  <img onmouseover="mouseOver(this)" onmouseleave="mouseLeave(this)"
+    src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+    alt="Smiley" width="32" height="32">
+  <img onmouseenter="mouseOver(this)" onmouseout="mouseLeave(this)"
+    src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+    alt="Smiley" width="32" height="32">
+
+  <div class="mouveMove" id="mouseMove" onmousemove="mouseMove(event)" onmouseout="clearCoor()"></div>
+  <p id="mouveMouse"></p>
+
+  <br>
+  <hr>
+
+  <h3>drag</h3>
+  <style>
+    .droptarget {
+      float: left;
+      width: 100px;
+      height: 35px;
+      margin: 15px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img
+      src="https://static5.depositphotos.com/1000270/486/i/600/depositphotos_4869272-stock-photo-bengal-cat-light-brown-cream.jpg"
+      width="30px" alt="" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">
+  </div>
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+  <p id="demo" style="clear:both;"></p>
+
+  <hr> <br>
+  <h3>play pause</h3>
+  <video width="320" height="240" controls onplay="onPlay()" onpause="onPause()" onplaying="onPlaying()"
+    onended="onEnded()">
+    <source src="../assets/video/control-panel-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <br>
+  <hr>
+  <h3>onreset onsubmit</h3>
+
+  <form onreset="onReset()">
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <input type="reset">
+  </form>
+
+  <form onreset="onSubmit()">
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <input type="text"> <br>
+    <input type="reset">
+  </form>
+
+  <br>
+  <hr>
+  <h3>fullscreen </h3>
+  <button onclick="openFullscreen();">Go Fullscreen Mode</button>
+
+  <button onclick="closeFullscreen();">Close Fullscreen</button>
+
+
+
+
+
+
+  <script src="./1. Animation.js"></script>
+</body>
+
+</html>

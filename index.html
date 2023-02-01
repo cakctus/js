@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='index.css' rel='stylesheet' />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>accesKey</h1>
+    <input type="text" id="name" name="name" placeholder="press ALT + s" required minlength="4" maxlength="8" size="10">
+    <input type="text" id="name2" name="name" placeholder="press ALT + t" required minlength="4" maxlength="8"
+        size="10">
+    <br>
+    <hr>
+
+    <h1>focus blur</h1>
+    <div>
+        <input type="text" id="blur" value="text">
+    </div>
+    <button type="button" onclick="gFocus()">focus</button>
+    <button type="button" onclick="blur()">blur</button>
+    <br>
+    <hr>
+
+    <h1>atribute</h1>
+    <div>
+        <label for="name">Some value</label>
+        <input id="name" name="name" type="text" required minlength="4" maxlength="8" size="10">
+    </div>
+    <div>
+        <label for="cat">Check</label>
+        <input id="cat" name="animal" type="checkbox" value="Cats" required>
+    </div>
+    <p id="attribute"></p>
+    <br>
+    <hr>
+
+    <h1>appendChild removeChild replaceChild</h1>
+    <select id="mySelect" size="10">
+        <option id="text">Audi</option>
+        <option id="text2">BMW</option>
+        <option>Saab</option>
+        <option>Volvo</option>
+    </select>
+    <br>
+    <hr>
+
+    <h1>insertBefore</h1>
+    <br>
+
+    <h1>insertAdjacentElement()</h1>
+    <div>
+        <span id="mySpan" style="color:blue">My span</span>
+    </div>
+    <h2 id="myH2">My Header</h2>
+    <button onclick="insertElement()">insertElement</button>
+
+    <h1>insertAdjacentHTML</h1>
+    <p id="insertHTML">insert HTML</p>
+    <button onclick="insertHTML()">insertElement</button>
+
+    <h1>insertAdjacentText</h1>
+    <p id="insertText">insert Text</p>
+    <button onclick="insertText()">insertText</button>
+    <hr>
+
+    <h1>parentNode parentElement children childNodes childElementCount</h1>
+    <div id="childrens">
+        <p>aasd</p>
+        <a href="#">link</a>
+        <ul>
+            <li>a</li>
+            <li>b</li>
+        </ul>
+    </div>
+
+    <div class="child" id="child">
+        <div id="sub-child">ss</div>
+        <a href="">link</a>
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+        <p>1</p>
+        <a href="">link</a>
+    </div>
+    <br>
+    <hr>
+
+
+    <p id="create-node"></p>
+    <p id="dropdown"></p>
+
+    <ul>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul>
+
+    <h5 id="h5">s</h5>
+    <form class="form">
+        <label for="input-number">Introduce the number</label>
+        <input type="number" id="input-number">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <hr>
+
+
+
+    <p>
+    <form id="myCarForm">
+        Favorite Car: <input type="text" name="fname" value="Volvo">
+    </form>
+    </p>
+    <p>
+    <form id="myColorForm">
+        Favorite Color: <input type="text" name="favcolor" value="Blue">
+    </form>
+    </p>
+    <p>The name of the form elements in the document are:</p>
+    <p id="form-name"></p>
+    <br>
+    <hr>
+
+    <p id="array-number"></p> <button onclick="sortNumbers()"> sort number</button>
+    <p id="array-min"></p>
+    <p id="cars"></p> <button onclick="sortCars()">sort cars</button>
+
+    <br>
+    <hr>
+
+    <input id="age" value="18" />
+    <button onclick="checkAge()">Try it</button>
+    <p id="inner"></p>
+    <p id="inner2"></p>
+
+    <br>
+    <hr>
+
+    <button onclick="tryCatch()">click</button>
+    <p id="try"></p>
+
+    <br>
+    <hr>
+
+    <p id="activeElement"></p>
+
+    <p id="time"></p>
+
+    <br>
+    <hr>
+    <button onclick="createAttribute()">create atribute</button>
+
+    <h1>Python</h1>
+    <h1>Python</h1>
+    <h2>Javascript</h2>
+
+
+    <a
+        href="https://developer.mozilla.org/ru/docs/Web/Events#%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F">
+        <p id="demo"></p>
+    </a>
+
+    <p id='tag'>Another tag</p>
+
+
+
+
+    <input type="checkbox" id="name" onmouseover="overFunc()">
+
+    <p id='demo'></p> <br>
+
+    <div class="red-element" onclick="removeDiv(this)" style="width: 350px; height: 350px; background-color: red;">
+    </div>
+
+
+
+
+
+    <p id="get_element_by_id"></p>
+
+    <p class="get_element_by_id"></p>
+    <p class="get_element_by_id"></p>
+
+    <input name="animal" type="checkbox" value="Cats">
+    <input name="animal" type="checkbox" value="Dogs"> <br>
+
+
+    <a href="#" onclick="openWin()">open</a>
+    <a href="#" onclick="closeWin()">close</a>
+    <p id="open"></p>
+
+    <p><button onclick="openWin()">Open "myWindow"</button></p>
+    <p><button onclick="closeWin()">Close "myWindow"</button></p>
+    <p><button onclick="checkWin()">Is "myWindow" closed?</button></p>
+
+    <p id="navigation"></p>
+
+    <br>
+    <h1></h1>
+
+    <button id="static-button" onclick="pageXYOffset()">page X Y Offset</button><br><br>
+
+    <div id='s'></div> <br><br><br><br>
+
+    <div id='ss'></div>
+
+    <div class="div" id="div"></div>
+
+    <br>
+    <hr>
+
+    <button onclick="myFunctionOpen()">Click me to
+        scroll</button><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <a href="#" onclick="top()">top</a>
+
+    <button onclick="sortFunct()">Sort Num</button>
+
+    <button onclick="myFunctionss()">Window open</button>
+
+    <br>
+    <hr>
+
+    <button onclick="alertFunc()">alert</button>
+
+    <p id="alertFuct"></p>
+
+    <br>
+    <hr>
+
+    <p id="setInterval"></p>
+    <p id="setTime"></p>
+
+    <div class="copy-container">
+        <input class="input-copy" type="text" value="text" readonly>
+        <button class="button-copy"> copy </button>
+    </div>
+
+    <div class="copy-container">
+        <input class="input-copy" type="text2" value="music" readonly>
+        <button class="button-copy"> copy </button>
+    </div>
+
+    <br>
+    <div id="scrollBox" class="scroll-img" style="width: 400; height: 400px; background-color: rgb(106, 100, 100); ">
+        <img id='scroll-img' class="img-scroll"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg"
+            width="350" alt="">
+    </div>
+
+
+
+    <script src="./2. DOM/1. Element.js"></script>
+    <script src="2. DOM/1. Document.js"></script>
+
+
+
+
+
+    <!--<script src="app.js"></script> 
+
+    <script src="1. variable.js"></script>
+
+    <script src="2. Operators.js"></script>
+
+    <script src="5. Object.js"></script>
+
+    <script src="6. String.js"></script> 
+
+    <script src="7. Number.js"></script>
+
+
+    <script src="/8. Array.js"></script>
+
+    <script src="/9. Date.js"></script>
+    
+
+    <script src="/10. If else.js"></script>
+    
+    <p id="person"></p>
+    
+    <script src="/11. For.js"></script>
+
+    <script src="/12. Set.js"></script>
+
+    <script src="/13. Betwise.js"></script>
+
+    
+
+    <script src="/14. RegExp.js"></script>
+
+    <script src="switch.js">
+    </script> 
+
+    -->
+
+
+
+
+
+    <!-- 
+    <script src="/15. Document.js"></script>
+    
+
+    
+    <script src="/16. Element.js"></script>
+    <script src="./Window/1. Object.js"></script>
+
+
+    <script src="./Window/2. Location.js"></script>
+
+
+    
+    <script src="./Window/3. Navigation.js"></script>
+
+    -->
+
+</body>
+
+</html>

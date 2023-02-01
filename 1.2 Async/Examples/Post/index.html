@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="output" style="min-height: 200px; white-space: pre; border: 1px solid black;"
+    ondragenter="document.getElementById('output').textContent = ''; event.stopPropagation(); event.preventDefault();"
+    ondragover="event.stopPropagation(); event.preventDefault();" ondrop="event.stopPropagation(); event.preventDefault();
+     dodrop(event);">
+  </div>
+
+
+  <form action="#" id="myForm">
+    <fieldset>
+      <legend>Registration</legend>
+      <div class="formBox">
+        <input type="text" id="first" name="first" />
+      </div>
+      <div>
+        <input type="file" id="file" name="file" />
+      </div>
+      <!-- <div class="formBox">
+            <label for="last">Last Name</label
+            ><input
+              type="text"
+              id="last"
+              name="last"
+              required
+              autocomplete="off"
+              autocapitalize="on"
+            />
+          </div>
+          <div class="formBox">
+            <label for="email">Email</label
+            ><input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="formBox">
+            <label for="pass">Password</label
+            ><input
+              type="password"
+              id="pass"
+              name="pass"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="formBox">
+            <label for="spam">I love spam</label
+            ><input type="checkbox" id="spam" name="spam" checked />
+          </div> -->
+      <div class="formBox">
+        <button id="btnSubmit">Send</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <script src="Post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Js Fundamentals</title>
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .iframe {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .iframe__item {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+
+    <form class="form">
+        <label for="input-number">Introduce the number</label>
+        <input type="text" id="input-number">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="array-number"></p> <button onclick="sortNumbers()"> sort number</button>
+
+    <p id="cars"></p> <button onclick="sortCars()">sort cars</button>
+
+    <p id="array-min"></p>
+
+    <button onclick="arrrMin()">min car</button>
+
+    <p id="demo"></p>
+    <p id='tag'>Another tag</p>
+
+    <p id="time"></p>
+    <p id="x"></p>
+
+
+    <br>
+    <hr>
+
+    <button onclick="tryCatch()">click</button>
+    <p id="try"></p>
+
+    <input id="input" type="text">
+    <button type="button" onclick="checkNumber()">Test Input</button>
+
+    <p id="message"></p>
+
+    <div class="iframe">
+        <div class="iframe__item">
+            <iframe src="https://www.google.com/webhp?igu=1" width=" 100%" height="95%"></iframe>
+        </div>
+        <div class="iframe__item">
+            <iframe src="https://www.youtube.com" width="100%" height="95%"></iframe>
+        </div>
+    </div>
+
+
+    <script src="7. Number.js"></script>
+    <script src="6. String.js"></script>
+    <script src="9.3 Boolean.js"></script>
+
+    <script src="5. Object.js"></script>
+    <script src="4. func.js"></script>
+    <script src="5.1 Classes.js"></script>
+
+    <script src="8. Array.js"></script>
+    <!-- <script src="Conversion.js"></script> -->
+
+    <!-- <script src="3. Data Types.js"></script>
+    <script src="6. String.js"></script>
+    <script src="7. Number.js"></script>
+    <script src="8. Array.js"></script>
+    <script src="5. Object.js"></script>
+    <script src="4. func.js"></script>
+    <script src="16. Try Catch.js"></script> -->
+</body>
+
+</html>
