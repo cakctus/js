@@ -6,7 +6,6 @@ for (i = 0; i < content.length; i++) {
 
 function toggleItem() {
   var itemClass = this.classList
-  const a = "somevar"
   for (i = 0; i < content.length; i++) {
     content[i].className = "section_content"
   }
